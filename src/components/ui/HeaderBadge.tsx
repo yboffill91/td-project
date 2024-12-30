@@ -18,7 +18,7 @@ interface HeaderBadgeProps {
 }
 
 const badgeVariants = cva(
-  'mb-10 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-medium transition-all duration-300  px-4 py-1 border backdrop-filter backdrop-blur-xl min-w-60 relative group/badge overflow-hidden',
+  'mb-10 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-medium transition-all duration-300  px-4 py-1 border backdrop-filter backdrop-blur-xl  relative group/badge overflow-hidden',
   {
     variants: {
       variant: {
@@ -57,7 +57,7 @@ export const HeaderBadge = ({
           {subheading && <p>| {subheading}</p>}
         </span>
         <div className='absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover/badge:duration-1000 group-hover/badge:[transform:skew(-12deg)_translateX(100%)]'>
-          <div className='relative h-full w-6 bg-gray-200/20'></div>
+          <div className='relative h-full w-6 bg-gray-200'></div>
         </div>
       </div>
     </div>

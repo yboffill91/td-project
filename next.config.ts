@@ -4,7 +4,8 @@ const nextConfig: NextConfig = {
   /* config options here */
 
   images: {
-    domains: ['api.dicebear.com'],
+    dangerouslyAllowSVG: true,
+    domains: ['api.dicebear.com', 'lh3.googleusercontent.com'],
   },
 };
 

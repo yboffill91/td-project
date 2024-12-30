@@ -6,11 +6,12 @@ import {
   FreeTools,
   GrowthJourney,
   SocialProof,
+  NewsLetter,
 } from '@/features/landing';
 export default function Home() {
   return (
     <>
-      <section className=''>
+      <section className='lg:pt-14 pt-24'>
         <HeroSection />
       </section>
       <Benefits />
@@ -19,6 +20,7 @@ export default function Home() {
       <FreeTools />
       <GrowthJourney />
       <SocialProof />
+      <NewsLetter />
     </>
   );
 }

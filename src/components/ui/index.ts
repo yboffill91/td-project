@@ -5,3 +5,6 @@ export * from './shimmerButton';
 export * from './input';
 export * from './CTA';
 export * from './magic-card';
+export * from './button';
+export * from './separator';
+export * from './toaster';

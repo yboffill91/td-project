@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { BodyFonts } from '@/lib';
+import { ThemeProvider } from '@/providers/ThemeProvider';
+import { AuthProvider } from '@/providers/AuthProvider';
+import { AuthGuard } from '@/providers/AuthGuardProvider';
+import { ToastProvider } from '@/providers/ToastProvider';
 
 export const metadata: Metadata = {
   title:
@@ -18,8 +22,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${BodyFonts.className} overflow-x-hidden`}>
-        {children}
+      <body
+        className={`${BodyFonts.className} overflow-x-hidden theme-transition `}
+      >
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+          disableTransitionOnChange={false}
+        >
+          <AuthProvider>
+            <AuthGuard>
+              {children}
+              <ToastProvider />
+            </AuthGuard>
+          </AuthProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

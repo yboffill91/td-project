@@ -15,11 +15,13 @@ export const DetailCard: React.FC<DetailCardProps> = ({
 }) => {
   return (
     <div
-      className={`flex-1 bg-card transition-all duration-300 p-4 rounded-lg border shadow-md max-w-[300px] `}
+      className={`flex-1 bg-card transition-all duration-300 p-4 rounded-lg shadow-md max-w-[300px] ${
+        title === 'Key Points' && '-my-5'
+      } `}
     >
       <div className='flex items-center gap-2 mb-4'>
         <div className={`p-2 rounded-lg ${color}`}>{icon}</div>
-        <h3 className={`font-semibold text-lg text-foreground`}>{title}</h3>
+        <h3 className={`font-semibold text-lg text-foreground `}>{title}</h3>
       </div>
       {Array.isArray(content) ? (
         <ul className='space-y-2'>

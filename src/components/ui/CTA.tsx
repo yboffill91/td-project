@@ -7,15 +7,15 @@ interface CTAProps {
   children: React.ReactNode;
 }
 
-const CTAVariants = cva('absolute inset-0 rounded-xl sm:rounded-3xl', {
+const CTAVariants = cva('container max-w-6xl mx-auto p-5 rounded-lg  ', {
   variants: {
     variant: {
       default:
-        'bg-gradient-to-br from-primary/50 via-secondary-blue/5  to-transparentt ',
+        'bg-gradient-to-br from-primary/40 from-10% via-secondary-blue/5 via-30%  to-transparentt ',
       green:
-        'bg-gradient-to-br from-secondary-green/50 via-secondary-green/5  to-transparentt',
+        'bg-gradient-to-br from-secondary-green/40  from-10% via-secondary-green/5 via-30% to-transparentt',
       orange:
-        'bg-gradient-to-br from-secondary-orange/50 via-secondary-pastel/5  to-transparentt',
+        'bg-gradient-to-br from-secondary-orange/40  from-10% via-secondary-pastel/5 via-30% to-transparentt',
     },
     defaultVariants: {
       variant: 'default',
@@ -25,16 +25,13 @@ const CTAVariants = cva('absolute inset-0 rounded-xl sm:rounded-3xl', {
 
 export const CTA = ({ children, variant }: CTAProps) => {
   return (
-    <section className='p-10 relative container mx-auto overflow-hidden'>
-      <div className=' mx-auto p-10 sm:px-6 lg:px-8 max-w-7xl'>
+    <section className='relative my-10'>
+      <div className=''>
         <div className=''>
           {/* Background gradient effect */}
-          <div className={cn(CTAVariants({ variant }))} />
-          <div className=''>
-            {children}
-            <div className='absolute -top-5 -right-5 w-40 h-40 bg-gradient-to-br from-blue-300/10 via-primary/30 to-secondary-blue/50 rounded-full blur-3xl'></div>
-            <div className='absolute -bottom-1 -left-3 w-40 h-40 bg-gradient-to-br from-orange-300/10 via-secondary-orange/30 to-secondary-pastel/50 rounded-full blur-3xl'></div>
-          </div>
+          <div className={cn(CTAVariants({ variant }))}>{children}</div>
+          <div className='absolute top-7 right-5 w-40 h-40 bg-gradient-to-br from-blue-300/10 from-10% via-primary/30 via-70% to-secondary-blue/50 rounded-full blur-3xl'></div>
+          <div className='absolute md:flex hidden bottom-10 left-30 w-40 h-40 bg-gradient-to-br from-blue-300/10 from-10% via-primary/30 via-70% to-secondary-blue/50 rounded-full blur-3xl '></div>
         </div>
       </div>
     </section>

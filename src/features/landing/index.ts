@@ -18,3 +18,5 @@ export * from './TimeLineIcon';
 export * from './TimeLineLine';
 
 export * from './SocialProof';
+
+export * from './NewsLetter';

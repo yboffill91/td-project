@@ -29,7 +29,7 @@ export const TimelineIcon: React.FC<TimelineIconProps> = ({
       ${isCompleted || isActive ? 'opacity-100' : 'opacity-40'}
     `}
     >
-      <Icon className='w-6 h-6 text-foreground' />
+      <Icon className='size-6 text-foreground' />
       <div className='absolute -bottom-6 text-[.7rem] font-medium whitespace-nowrap hidden md:block'>
         {title}
       </div>

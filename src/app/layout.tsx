@@ -18,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${BodyFonts.className}`}>{children}</body>
+      <body className={`${BodyFonts.className} overflow-x-hidden`}>
+        {children}
+      </body>
     </html>
   );
 }

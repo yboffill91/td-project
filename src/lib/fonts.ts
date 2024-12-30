@@ -9,4 +9,3 @@ export const BodyFonts = Inter({
   subsets: ['latin'],
 });
 
-// fdfwef

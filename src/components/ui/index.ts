@@ -8,3 +8,4 @@ export * from './magic-card';
 export * from './button';
 export * from './separator';
 export * from './toaster';
+export * from './label';

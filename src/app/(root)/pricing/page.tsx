@@ -1,4 +1,4 @@
-// import { BackgroundEffect } from '@/features/newLanding/about';
+import { BackgroundEffect } from '@/features/about';
 import {
   PricingCTA,
   PricingFAQ,
@@ -10,7 +10,7 @@ import React from 'react';
 const PricingPage = () => {
   return (
     <main className='relative pt-20'>
-      {/* <BackgroundEffect /> */}
+      <BackgroundEffect />
       <div className='relative'>
         <PricingPlans />
         <PricingFeatures />

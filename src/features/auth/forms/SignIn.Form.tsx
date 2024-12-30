@@ -1,4 +1,4 @@
-import { Button, Input, Label, Separator } from '@/components/ui';
+import { Button, Input, Label } from '@/components/ui';
 import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
@@ -60,7 +60,7 @@ export const SignInForm = () => {
         </Button>
       </form>
       <div className='mt-8 flex gap-2 items-center justify-center'>
-        <p className='capitalize'>Don't have an account?</p>
+        <p className='capitalize'>Don&apos;t have an account?</p>
         <Link
           href={'sign-up'}
           className='text-secondary font-semibold underline'

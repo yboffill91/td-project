@@ -248,8 +248,8 @@ export const PricingPlans = () => {
         </div>
 
         {/* Contact Section */}
-        <div className='max-w-4xl mx-auto mt-20 text-center'>
-          <div className='bg-gradient-to-b from-primary/20 to-background rounded-2xl p-8 shadow-lg'>
+        <div className='max-w-7xl mx-auto mt-20 text-center'>
+          <div className='bg-gradient-to-b from-primary/10 to-background rounded-2xl p-8'>
             <h3 className='text-2xl font-bold text-foreground mb-4'>
               Need a Custom Plan?
             </h3>
@@ -261,21 +261,21 @@ export const PricingPlans = () => {
             </p>
 
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 max-w-3xl mx-auto'>
-              <div className='flex flex-col items-center p-4 rounded-xl bg-background shadow-sm'>
+              <div className='flex flex-col items-center p-4 rounded-xl bg-card shadow-sm'>
                 <Calculator className='w-6 h-6 text-primary mb-2' />
                 <span className='text-sm font-medium text-foreground'>
                   Custom Quote
                 </span>
               </div>
 
-              <div className='flex flex-col items-center p-4 rounded-xl bg-backgroundshadow-sm'>
+              <div className='flex flex-col items-center p-4 rounded-xl bg-card shadow-sm'>
                 <Timer className='w-6 h-6 text-primary mb-2' />
                 <span className='text-sm font-medium text-foreground'>
                   24h Response
                 </span>
               </div>
 
-              <div className='flex flex-col items-center p-4 rounded-xl bg-white dark:bg-gray-800 shadow-sm'>
+              <div className='flex flex-col items-center p-4 rounded-xl bg-card shadow-sm'>
                 <MessagesSquare className='w-6 h-6 text-primary mb-2' />
                 <span className='text-sm font-medium text-foreground'>
                   Free Consultation

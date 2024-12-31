@@ -7,15 +7,16 @@ interface CTAProps {
   children: React.ReactNode;
 }
 
-const CTAVariants = cva('container max-w-6xl mx-auto p-5 rounded-lg  ', {
+const CTAVariants = cva(' ', {
   variants: {
     variant: {
       default:
-        'bg-gradient-to-br from-primary/40 from-10% via-secondary-blue/5 via-30%  to-transparentt ',
+        'bg-gradient-to-tr from-primary   via-transparent via-50% to-primary',
+
       green:
-        'bg-gradient-to-br from-secondary-green/40  from-10% via-secondary-green/5 via-30% to-transparentt',
+        'bg-gradient-to-tr from-secondary  via-transparent via-50% to-secondary',
       orange:
-        'bg-gradient-to-br from-secondary-orange/40  from-10% via-secondary-pastel/5 via-30% to-transparentt',
+        'bg-gradient-to-tr from-secondary-orange   via-transparent via-50% to-secondary-orange',
     },
     defaultVariants: {
       variant: 'default',
@@ -25,13 +26,31 @@ const CTAVariants = cva('container max-w-6xl mx-auto p-5 rounded-lg  ', {
 
 export const CTA = ({ children, variant }: CTAProps) => {
   return (
-    <section className='relative my-10'>
+    <section className='relative my-10 container mx-auto'>
       <div className=''>
         <div className=''>
           {/* Background gradient effect */}
-          <div className={cn(CTAVariants({ variant }))}>{children}</div>
-          <div className='absolute top-7 right-5 w-40 h-40 bg-gradient-to-br from-blue-300/10 from-10% via-primary/30 via-70% to-secondary-blue/50 rounded-full blur-3xl'></div>
-          <div className='absolute md:flex hidden bottom-10 left-30 w-40 h-40 bg-gradient-to-br from-blue-300/10 from-10% via-primary/30 via-70% to-secondary-blue/50 rounded-full blur-3xl '></div>
+          <div
+            className={cn(
+              'relative container max-w-6xl mx-auto p-[2px] rounded-lg',
+              CTAVariants({ variant })
+            )}
+          >
+            <div className='bg-card rounded-lg p-3 '>{children}</div>
+
+            <div
+              className={cn(
+                'absolute -bottom-10 -right-10 size-40 -z-50 rounded-full blur-3xl animate-pulse',
+                CTAVariants({ variant })
+              )}
+            />
+            <div
+              className={cn(
+                'absolute md:flex hidden -top-10 -left-10 size-40 -z-50 blur-3xl rounded-full animate-pulse',
+                CTAVariants({ variant })
+              )}
+            />
+          </div>
         </div>
       </div>
     </section>

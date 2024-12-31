@@ -10,7 +10,7 @@ export const TimeLine = () => {
         ) => (
           <div key={title + year} className='relative group'>
             <div
-              className={`relative z-10 mx-auto max-w-5xl rounded-xl p-6 sm:p-8 bg-background/50 backdrop-blur-sm border transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${accent}`}
+              className={`relative z-10 mx-auto max-w-5xl rounded-xl p-6 sm:p-8 bg-background/50 backdrop-blur-sm  transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${accent}`}
             >
               {/* year badge */}
               <div

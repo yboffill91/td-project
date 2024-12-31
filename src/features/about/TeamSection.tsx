@@ -1,11 +1,12 @@
 'use client';
 
 import { Users2 } from 'lucide-react';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { teamMembers } from '@/features/about/constants';
 import { motion } from 'framer-motion';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 import Image from 'next/image';
+import { HeaderBadge } from '@/components/ui';
 
 export const TeamSection = () => {
   const [activeTab, setActiveTab] = useState('member1');
@@ -15,12 +16,11 @@ export const TeamSection = () => {
       <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Section Header */}
         <div className='max-w-3xl mx-auto text-center mb-12 sm:mb-24'>
-          <div className='inline-flex items-center gap-2 bg-secondary-green/10 rounded-full px-3 py-1 mb-6'>
-            <Users2 className='w-4 h-4 text-secondary-green' />
-            <span className='text-sm font-medium text-secondary-green'>
-              Meet Our Team
-            </span>
-          </div>
+          <HeaderBadge
+            variant='secondary'
+            heading='Meet Our Team'
+            icon={Users2}
+          />
           <h2 className='text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6'>
             <span className='text-foreground'>The People Behind</span>
             <span className='block gradient-green'>Our Success</span>
@@ -76,7 +76,8 @@ export const TeamSection = () => {
                         src={member.image}
                         alt={member.name}
                         className='w-full h-auto transform transition-transform duration-500 group-hover:scale-105'
-                        fill
+                        width={1000}
+                        height={750}
                       />
                     </div>
                     <div className='absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary-violet/10 rounded-2xl blur-2xl -z-10 group-hover:blur-3xl transition-all duration-500'></div>

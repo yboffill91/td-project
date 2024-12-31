@@ -1,14 +1,11 @@
-import { ShimmerButton } from '@/components/ui';
-import { ArrowRight, Stars } from 'lucide-react';
+import { HeaderBadge, ShimmerButton } from '@/components/ui';
+import { ArrowRight, Star } from 'lucide-react';
 import React from 'react';
 
 export const AboutHero = () => {
   return (
     <div className='text-center min-h-[60dvh]'>
-      <div className='inline-flex items-center gap-2 bg-primary/10 rounded-full px-3 py-1 mb-6'>
-        <Stars width={16} height={16} className='text-primary' />
-        <span className='text-sm font-medium text-primary'>Our Journey</span>
-      </div>
+      <HeaderBadge heading='Our Journey' icon={Star} />
 
       <h1 className='text-4xl sm:text-5xl font-bold mb-6 leading-tight'>
         <span className='block text-foreground'>From Dreams</span>

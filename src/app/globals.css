@@ -221,6 +221,31 @@
   animation-delay: 1400ms;
 }
 
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff00ff, #00ff00, #0000ff, #ff00ff);
+  background-size: 400% 400%;
+  z-index: 0;
+  animation: gradient 15s ease infinite;
+}
+
 @keyframes float {
   0%,
   100% {
@@ -231,6 +256,19 @@
     transform: translateY(-20px);
     opacity: 1;
   }
+}
+
+@keyframes border-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-border-spin {
+  animation: spin 8s linear infinite;
 }
 
 @keyframes fade-in {

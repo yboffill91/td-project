@@ -1,7 +1,6 @@
 import { HeaderBadge, ShimmerButton } from '@/components/ui';
 import { HeadeingsFonts } from '@/lib';
 import { HeroTrusted, FloatingCards, Features } from '@/features/landing';
-import Image from 'next/image';
 import {
   ArrowUp,
   ChartLine,
@@ -10,7 +9,7 @@ import {
   Search,
   Sparkles,
 } from 'lucide-react';
-
+import Image from 'next/image';
 export const HeroSection = () => {
   return (
     <div className='min-h-screen flex flex-col items-center justify-evenly container mx-auto '>
@@ -71,21 +70,19 @@ export const HeroSection = () => {
         <div className='lg:w-full relative mt-2 sm:mt-12 lg:mt-0 z-10 '>
           <div className='relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] w-full  flex items-end justify-center'>
             {/* Top Left Card */}
-            <div className='hidden sm:flex absolute top-1/4 left-10 lg:left-30 z-20  animate-float transition-all duration-1000'>
+            <div className='hidden sm:flex absolute top-1/4 -left-10  z-20  animate-float '>
               <FloatingCards title='Top Rankings' content='89% Success Rate'>
                 <Globe className='icons-hero ' />
               </FloatingCards>
             </div>
-
             {/* Organic Traffic Card */}
             <div className='absolute z-20 bottom-5 w-64 '>
               <FloatingCards title='Average ROI' content='+285% Annual'>
                 <ArrowUp className='icons-hero ' />
               </FloatingCards>
             </div>
-
             {/* Top Right Card */}
-            <div className='hidden sm:flex absolute top-40 right-10 lg:right-20 z-20  animate-float-slow transition-all duration-1000'>
+            <div className='hidden md:flex absolute top-40 -right-10  z-20  animate-float-slow transition-all duration-1000'>
               <FloatingCards title='Monthly Traffic' content='+20k Visitors'>
                 <Search className='icons-hero ' />
               </FloatingCards>
@@ -95,12 +92,13 @@ export const HeroSection = () => {
 
             <Image
               src={'/standupTobbi.webp'}
-              width={400}
-              height={1000}
+              width={1000}
+              height={5000}
               alt='Stand Up Tobbi'
-              className='h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] w-auto object-contain rounded-full '
+              className=' h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px]  w-auto object-contain  relative z-10rounded-full'
               style={{
-                filter: `drop-shadow(0 -10px 100px hsla(198, 79%, 59%, 0.2))`,
+                maskImage: `linear-gradient(black 80%, transparent)`,
+                filter: `drop-shadow(0 -10px 50px hsla(198, 79%, 59%, 0.3))`,
               }}
             />
 

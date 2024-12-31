@@ -1,3 +1,4 @@
+import { HeaderBadge } from '@/components/ui';
 import { values } from '@/features/about/constants';
 import { Gem } from 'lucide-react';
 
@@ -7,12 +8,11 @@ export const Values = () => {
       <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Section Header */}
         <div className='max-w-3xl mx-auto text-center mb-12 sm:mb-24'>
-          <div className='inline-flex items-center gap-2 bg-secondary-orange/10 rounded-full px-3 py-1 mb-6'>
-            <Gem className='w-4 h-4 text-secondary-orange' />
-            <span className='text-sm font-medium text-secondary-orange'>
-              Our Foundation
-            </span>
-          </div>
+          <HeaderBadge
+            icon={Gem}
+            heading='Our Foundation'
+            variant='secondaryOrange'
+          />
           <h2 className='text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6'>
             <span className='text-foreground'>Built on</span>
             <span className='gradient-orange'> Strong Values</span>

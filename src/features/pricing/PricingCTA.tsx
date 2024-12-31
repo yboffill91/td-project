@@ -4,13 +4,13 @@ import React from 'react';
 
 export const PricingCTA = () => {
   return (
-    <CTA variant='green'>
+    <CTA variant='orange'>
       {/* Content Column */}
-      <div className='text-center lg:text-left'>
+      <div className='text-center lg:text-left flex flex-col items-center justify-center'>
         <HeaderBadge
           heading='Get Started Today'
           icon={Rocket}
-          variant='secondary'
+          variant='secondaryOrange'
         />
 
         <h2 className='text-3xl sm:text-4xl font-bold mb-6'>
@@ -36,6 +36,7 @@ export const PricingCTA = () => {
           </ShimmerButton>
           <Button
             variant='outline'
+            size={'lg'}
             className='w-full sm:w-auto px-6 py-2.5 text-sm font-medium whitespace-nowrap'
           >
             Talk to Sales

@@ -65,7 +65,7 @@ export const PricingCTA = () => {
           <p className='text-sm text-foreground/70'>Satisfaction Rate</p>
         </div>
         <div className='text-center p-6 bg-card/20 backdrop-filter backdrop-blur-3xl rounded-xl shadow-lg'>
-          <div className='text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-emerald-700 via-secondary to-secondary-green mb-2'>
+          <div className='text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-emerald-700 via-secondary to-secondary-green mb-2 !hover:shadow-none'>
             14d
           </div>
           <p className='text-sm text-foreground/70'>Free Trial</p>

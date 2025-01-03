@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from 'framer-motion';
 import { auth } from '@/lib';
-import { Button } from '@/components/ui';
+import { Button, ShimmerButton } from '@/components/ui';
 import { FaGoogle } from 'react-icons/fa';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdClose } from 'react-icons/io';
@@ -47,14 +47,14 @@ export const HamburguerMenuHolder = () => {
           >
             <NavItems />
             {!user && (
-              <Button
+              <ShimmerButton
                 onClick={handleGoogleSignIn}
-                size={'sm'}
                 className='flex md:hidden gradient-primary w-full sm:w-auto mt-4 sm:mt-0'
+                variant='primary'
               >
                 <FaGoogle />
                 Sign Up
-              </Button>
+              </ShimmerButton>
             )}
           </motion.div>
         )}

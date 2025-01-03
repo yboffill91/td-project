@@ -15,8 +15,8 @@ export const DetailCard: React.FC<DetailCardProps> = ({
 }) => {
   return (
     <div
-      className={`flex-1 bg-card transition-all duration-300 p-4 rounded-lg shadow-md max-w-[300px] ${
-        title === 'Key Points' && '-my-5'
+      className={`flex-1 bg-card/50 border-card border transition-transform duration-300 p-4 rounded-lg shadow-md w-full sm:min-h-60 h-auto ${
+        title === 'Key Points' && 'sm:-my-5 my-0 '
       } `}
     >
       <div className='flex items-center gap-2 mb-4'>

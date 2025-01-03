@@ -40,7 +40,7 @@ export const CTA = ({ children, variant }: CTAProps) => {
 
             <div
               className={cn(
-                'absolute -bottom-10 -right-10 size-40 -z-50 rounded-full blur-3xl animate-pulse',
+                'absolute -bottom-10 -right-10 size-40 -z-50 rounded-full blur-3xl animate-pulse lg:block hidden',
                 CTAVariants({ variant })
               )}
             />

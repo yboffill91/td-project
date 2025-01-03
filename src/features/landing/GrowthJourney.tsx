@@ -11,7 +11,7 @@ export function GrowthJourney() {
   const { currentStep, goToStep } = useAutoProgress();
 
   return (
-    <div className='w-full container mx-auto sm:px-4 sm:py-12 '>
+    <div className='w-full container mx-auto sm:px-4 sm:py-12 max-w-6xl '>
       <div className='text-center mb-12'>
         <HeaderBadge
           heading='Growth Journey'
@@ -84,7 +84,7 @@ export function GrowthJourney() {
 
       {/* Detail Cards */}
       <AnimatePresence>
-        <div className='grid md:grid-cols-3 gap-1 max-w-[930px] mx-auto'>
+        <div className='flex item-center justify-center sm:flex-row sm:px-4 px-0 flex-col gap-2 max-w-4xl mx-auto w-full'>
           <DetailCard
             title='Duration'
             icon={<Clock className='size-5 text-foreground' />}

@@ -72,7 +72,7 @@ const features = [
 
 export function Features() {
   return (
-    <section className=' w-screen bg-gradient-to-b bg-card/50 backdrop-blur-3xl backdrop-filter xl:py-10 py-2 '>
+    <section className=' w-screen bg-gradient-to-b bg-background/80 backdrop-blur-3xl backdrop-filter xl:py-10 py-2 '>
       <div className='m-auto max-w-[1400px] grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-2'>
         {features.map(({ icon, title }) => (
           <div

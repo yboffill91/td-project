@@ -12,8 +12,8 @@ import {
 import Image from 'next/image';
 export const HeroSection = () => {
   return (
-    <div className='min-h-screen flex flex-col items-center justify-evenly container mx-auto '>
-      <div className='relative w-full grid lg:grid-cols-2 mx-auto'>
+    <div className='min-h-[calc(100dvh-2rem)] flex flex-col items-center justify-between container mx-auto px-4'>
+      <div className='relative w-full grid lg:grid-cols-2 mx-auto '>
         <div className='z-10 text-center lg:text-left my-auto '>
           <HeaderBadge
             heading='Create Stunning Websites in Minutes'
@@ -22,7 +22,7 @@ export const HeroSection = () => {
           />
 
           <h1
-            className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] mb-4 sm:mb-6 mx-auto lg:mx-0 ${HeadeingsFonts.className}`}
+            className={`text-3xl text-balance sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] mb-4 sm:mb-6 mx-auto lg:mx-0 ${HeadeingsFonts.className}`}
           >
             <span className='block text-foreground'>
               Turn Your Business Into a
@@ -43,10 +43,7 @@ export const HeroSection = () => {
             and direct access to our expert team.
           </p>
           <div className='flex flex-col 2xl:flex-row gap-2 2xl:gap-4 items-center justify-center lg:justify-start mb-10 p-4 2xl:p-0'>
-            <ShimmerButton
-              variant='primary'
-              className='px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-medium text-sm sm:text-base inline-flex w-full 2xl:w-auto'
-            >
+            <ShimmerButton className='px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-medium text-sm sm:text-base inline-flex w-full 2xl:w-auto'>
               <span>
                 <ChartLine className='mr-4' />
               </span>
@@ -54,8 +51,8 @@ export const HeroSection = () => {
             </ShimmerButton>
 
             <ShimmerButton
-              variant='primary'
-              className='px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base inline-flex w-full 2xl:w-auto !bg-gradient-to-br !from-orange-400 !via-secondary-orange !to-secondary-pastel !text-white !hover:text-white !font-semibold hover:scale-100'
+              variant='secondary'
+              className='px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base inline-flex w-full 2xl:w-auto '
               data-scroll-to='tools'
             >
               <span>
@@ -68,7 +65,7 @@ export const HeroSection = () => {
         </div>
         {/* Right Column */}
         <div className='lg:w-full relative mt-2 sm:mt-12 lg:mt-0 z-10 '>
-          <div className='relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] w-full  flex items-end justify-center'>
+          <div className='relative flex items-end justify-center'>
             {/* Top Left Card */}
             <div className='hidden sm:flex absolute top-1/4 lg:left-10 -left-10 z-20  animate-float '>
               <FloatingCards title='Top Rankings' content='89% Success Rate'>
@@ -92,13 +89,13 @@ export const HeroSection = () => {
 
             <Image
               src={'/standupTobbi.webp'}
-              width={1000}
-              height={5000}
+              width={10000}
+              height={1000}
               alt='Stand Up Tobbi'
-              className=' h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px]  w-auto object-contain  relative z-10rounded-full'
+              className=' h-full w-auto object-fill relative z-10rounded-full'
               style={{
                 maskImage: `linear-gradient(black 80%, transparent)`,
-                filter: `drop-shadow(0 -10px 50px hsla(198, 79%, 59%, 0.3))`,
+                filter: `drop-shadow(0 -10px 50px rgba(120,119,198,0.1))`,
               }}
             />
 

@@ -4,7 +4,9 @@ import Image from 'next/image';
 
 export function Benefits() {
   return (
-    <section className='py-10  overflow-hidden mt-12 '>
+    <section className='pt-32 pb-10 relative overflow-hidden '>
+      <div className='absolute top-0 z-[-2] h-screen w-screen bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]' />
+
       <div className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1400px]'>
         {/* Section Header */}
         <div className='text-center max-w-2xl mx-auto mb-12 sm:mb-20'>

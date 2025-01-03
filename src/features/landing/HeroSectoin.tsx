@@ -70,7 +70,7 @@ export const HeroSection = () => {
         <div className='lg:w-full relative mt-2 sm:mt-12 lg:mt-0 z-10 '>
           <div className='relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] w-full  flex items-end justify-center'>
             {/* Top Left Card */}
-            <div className='hidden sm:flex absolute top-1/4 -left-10  z-20  animate-float '>
+            <div className='hidden sm:flex absolute top-1/4 lg:left-10 -left-10 z-20  animate-float '>
               <FloatingCards title='Top Rankings' content='89% Success Rate'>
                 <Globe className='icons-hero ' />
               </FloatingCards>
@@ -82,7 +82,7 @@ export const HeroSection = () => {
               </FloatingCards>
             </div>
             {/* Top Right Card */}
-            <div className='hidden md:flex absolute top-40 -right-10  z-20  animate-float-slow transition-all duration-1000'>
+            <div className='hidden md:flex absolute top-40 lg:right-10 -right-10  z-20  animate-float-slow transition-all duration-1000'>
               <FloatingCards title='Monthly Traffic' content='+20k Visitors'>
                 <Search className='icons-hero ' />
               </FloatingCards>

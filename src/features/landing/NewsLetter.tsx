@@ -10,7 +10,7 @@ export const NewsLetter = () => {
             <HeaderBadge
               heading='Join 370+ subscribers'
               icon={Star}
-              variant='secondaryOrange'
+              variant='default'
             />
 
             <h2 className='text-4xl font-bold'>

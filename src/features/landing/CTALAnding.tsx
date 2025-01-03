@@ -1,4 +1,4 @@
-import { ShimmerButton } from '@/components/ui';
+import { Button, ShimmerButton } from '@/components/ui';
 import { ArrowRight } from 'lucide-react';
 import { CTA } from '@/components/ui';
 
@@ -24,13 +24,14 @@ export const CTALanding = () => {
             >
               Get My Free Analysis
             </ShimmerButton>
-            <ShimmerButton
-              variant='secondary'
-              className='w-full sm:w-auto px-6 py-2.5 text-sm font-medium whitespace-nowrap inline-flex items-center justify-center gap-2'
+            <Button
+              variant='outline'
+              size={'lg'}
+              className='w-full sm:w-auto px-6  text-sm font-medium whitespace-nowrap inline-flex items-center justify-center gap-2'
             >
               View Success Stories
               <ArrowRight className='w-4 h-4 transform group-hover:translate-x-1 transition-transform' />
-            </ShimmerButton>
+            </Button>
           </div>
         </div>
 

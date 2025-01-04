@@ -134,7 +134,7 @@ export const PricingPlans = () => {
                 </div>
 
                 <ShimmerButton
-                  className='w-full mb-8'
+                  className='w-full mb-8 py-2'
                   variant={popular ? 'primary' : 'secondary'}
                 >
                   Get Started
@@ -283,7 +283,7 @@ export const PricingPlans = () => {
               </div>
             </div>
 
-            <ShimmerButton variant='primary' className='px-8 py-3'>
+            <ShimmerButton variant='primary' className='px-8 py-2'>
               Get Custom Pricing
             </ShimmerButton>
 

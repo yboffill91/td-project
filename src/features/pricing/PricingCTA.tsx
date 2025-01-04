@@ -28,8 +28,8 @@ export const PricingCTA = () => {
 
         <div className='flex flex-col sm:flex-row items-center gap-4 justify-center'>
           <ShimmerButton
-            variant='primary'
-            className='w-full sm:w-auto px-6 py-2.5 text-sm font-medium whitespace-nowrap inline-flex items-center justify-center gap-2 !bg-gradient-to-tr !from-emerald-700 !via-secondary !to-secondary-green hover:!shadow-secondary-orange/25'
+            variant='green'
+            className='w-full sm:w-auto px-6 py-2.5 text-sm font-medium whitespace-nowrap inline-flex items-center justify-center gap-2 '
           >
             Start Free Trial
             <ArrowRight className='w-4 h-4' />

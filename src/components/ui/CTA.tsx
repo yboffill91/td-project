@@ -36,7 +36,7 @@ export const CTA = ({ children, variant }: CTAProps) => {
               CTAVariants({ variant })
             )}
           >
-            <div className='bg-card rounded-lg p-3 '>{children}</div>
+            <div className='bg-background rounded-lg p-3 '>{children}</div>
 
             <div
               className={cn(

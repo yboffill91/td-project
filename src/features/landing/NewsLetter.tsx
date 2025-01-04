@@ -3,7 +3,7 @@ import { Star, Shield, Clock } from 'lucide-react';
 export const NewsLetter = () => {
   return (
     <CTA variant='default'>
-      <div className='relative bg-card/50 backdrop-blur-3xl rounded-2xl p-8 sm:p-12 '>
+      <div className='relative p-8 sm:p-12 '>
         <div className='grid lg:grid-cols-5 gap-12 items-center'>
           {/* Content Column */}
           <div className='lg:col-span-3 space-y-6 text-center lg:text-left'>
@@ -45,10 +45,7 @@ export const NewsLetter = () => {
                     className='w-full px-4 py-3 rounded-lg input transition-all mb-8 border-ring border focus:outline-none focus:bg-card'
                   />
                 </div>
-                <ShimmerButton
-                  variant='primary'
-                  className='w-full py-3 hover:scale-100 mb-3'
-                >
+                <ShimmerButton variant='primary' className='w-full py-4 mb-3'>
                   Get Free Tips
                 </ShimmerButton>
               </div>

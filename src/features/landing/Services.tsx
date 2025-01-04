@@ -154,7 +154,7 @@ export function Services() {
           {serviceCategories.map((category) => (
             <div
               key={category.title}
-              className='relative p-8 rounded-xl bg-gradient-to-br border-card border from-primary/5 from-10% via-card/10 via-30%  to-transparent'
+              className='relative p-8 rounded-xl bg-gradient-to-br from-background/30  via-card/10  to-transparent'
             >
               {/* Category Header */}
               <div className='flex items-center gap-4 mb-6'>

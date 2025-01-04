@@ -25,18 +25,18 @@ export function ShimmerButton({
   };
 
   const baseStyles =
-    'group/button relative inline-flex items-center  justify-start overflow-hidden rounded-lg md:px-4 px-2 py-1.5 text-sm font-medium transition-all duration-300 ease-in-out hover:shadow-xl bg-gradient-to-br';
+    'group/button relative inline-flex items-center justify-start overflow-hidden rounded-lg md:px-4 px-2 py-1.5 text-sm font-medium transition-all duration-300 ease-in-out hover:shadow-xl bg-gradient-to-br';
 
   const variantStyles = {
     primary:
-      'from-primary via-blue-400 to-secondary-blue text-primary-foreground font-semibold hover:-translate-y-1 hover:shadow-primary/10 ',
+      'from-blue-700 via-primary to-secondary-blue text-primary-foreground font-semibold hover:-translate-y-1 hover:shadow-primary/10 ',
     green:
-      'from-secondary via-emerald-400 to-secondary-green text-primary-foreground font-semibold hover:-translate-y-1 hover:shadow-green/10 ',
+      'from-emerald-700 via-secondary to-secondary-green text-primary-foreground font-semibold hover:-translate-y-1 hover:shadow-green/10 ',
     orange:
-      'from-secondary-pastel via-orange-400 to-secondary-orange text-primary-foreground font-semibold hover:-translate-y-1 hover:shadow-secondary-orange/10 ',
+      'from-orange-700 via-secondary-pastel to-secondary-orange text-primary-foreground font-semibold hover:-translate-y-1 hover:shadow-secondary-orange/10 ',
 
     secondary:
-      'border border-accent/50 bg-accent/30 text-foreground shadow-sm hover:bg-card  hover:text-card-foreground',
+      'border border-accent/50 bg-accent/30 text-card-foreground shadow-sm hover:bg-card',
   };
 
   return (
@@ -48,9 +48,9 @@ export function ShimmerButton({
       <div className='absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover/button:duration-1000 group-hover/button:[transform:skew(-12deg)_translateX(100%)]'>
         <div
           className={`relative h-full w-8 ${
-            variant === 'primary'
-              ? 'bg-primary-foreground/50'
-              : 'bg-primary-foreground/30'
+            variant !== 'secondary'
+              ? 'bg-primary-foreground/70'
+              : 'bg-primary-foreground/50'
           }`}
         />
       </div>

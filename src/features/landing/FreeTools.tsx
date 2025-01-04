@@ -15,7 +15,6 @@ import {
   MapPin,
 } from 'lucide-react';
 import { HeaderBadge, MagicCard, ShimmerButton } from '@/components/ui';
-import { FaRobot } from 'react-icons/fa';
 
 export function FreeTools() {
   const [activeTool, setActiveTool] = useState<string | null>(null);
@@ -26,7 +25,7 @@ export function FreeTools() {
       name: 'Web Cost Calculator',
       description:
         'Get instant, accurate website cost estimates based on your specific needs.',
-      icon: <Calculator className='w-4 h-4' style={{ color: '#030712' }} />,
+      icon: <Calculator className='w-4 h-4 text-primary-foreground' />,
       status: 'live',
       color: 'bg-blue-500',
       metrics: [
@@ -39,7 +38,7 @@ export function FreeTools() {
       name: 'SEO Scout',
       description:
         'Analyze and optimize your website for better search engine rankings.',
-      icon: <Search className='w-4 h-4' style={{ color: '#030712' }} />,
+      icon: <Search className='w-4 h-4 text-primary-foreground' />,
       status: 'live',
       color: 'bg-green-500',
       metrics: [
@@ -50,42 +49,42 @@ export function FreeTools() {
     {
       id: 'website-builder',
       name: 'Website Builder',
-      icon: <Layout className='w-4 h-4' style={{ color: '#030712' }} />,
+      icon: <Layout className='w-4 h-4 text-primary-foreground' />,
       status: 'soon',
       color: 'bg-orange-500',
     },
     {
       id: 'gmb',
       name: 'GMB Manager',
-      icon: <MapPin className='w-4 h-4' style={{ color: '#030712' }} />,
+      icon: <MapPin className='w-4 h-4 text-primary-foreground' />,
       status: 'soon',
       color: 'bg-red-500',
     },
     {
       id: 'ai-chat',
       name: 'AI Chat',
-      icon: <MessageSquare className='w-4 h-4' style={{ color: '#030712' }} />,
+      icon: <MessageSquare className='w-4 h-4 text-primary-foreground' />,
       status: 'soon',
       color: 'bg-purple-500',
     },
     {
       id: 'sales-funnel',
       name: 'Sales Funnel',
-      icon: <GitBranch className='w-4 h-4' style={{ color: '#030712' }} />,
+      icon: <GitBranch className='w-4 h-4 text-primary-foreground' />,
       status: 'soon',
       color: 'bg-pink-500',
     },
     {
       id: 'crm',
       name: 'Business CRM',
-      icon: <Building2 className='w-4 h-4' style={{ color: '#030712' }} />,
+      icon: <Building2 className='w-4 h-4 text-primary-foreground' />,
       status: 'soon',
       color: 'bg-indigo-500',
     },
     {
       id: 'writer',
       name: 'AI Writer',
-      icon: <Pencil className='w-4 h-4' style={{ color: '#030712' }} />,
+      icon: <Pencil className='w-4 h-4 text-primary-foreground' />,
       status: 'soon',
       color: 'bg-cyan-500',
     },
@@ -111,8 +110,8 @@ export function FreeTools() {
 
           <p className='text-xl text-foreground/70 mb-8'>
             Our AI quietly works in the background, analyzing your business
-            needs and providing actionable insights. The best part? You'll
-            forget it's even there until you need it.
+            needs and providing actionable insights. The best part? You&apos;ll
+            forget it&apos;s even there until you need it.
           </p>
 
           {/* Tools Grid */}
@@ -121,12 +120,13 @@ export function FreeTools() {
               <ShimmerButton
                 key={tool.id}
                 onClick={() => setActiveTool(tool.id)}
-                className='flex items-center justify-start  px-3 py-2 bg-card/50 backdrop-blur-sm text-primary-foreground '
+                className='flex items-center jus-center !px-1 !gap-1'
+                variant='orange'
               >
                 <div className='p-1.5 rounded-md bg-background/10'>
                   {tool.icon}
                 </div>
-                <span className='text-xs font-medium'>{tool.name}</span>
+                <span className='text-[.7rem] font-medium'>{tool.name}</span>
               </ShimmerButton>
             ))}
           </div>
@@ -137,10 +137,10 @@ export function FreeTools() {
           gradientColor='hsl(6 100% 69%)'
           gradientSize={150}
           gradientOpacity={0.5}
-          className='max-w-[768px]'
+          className='max-w-3xl'
         >
-          <div className='sm:grid sm:grid-cols-12 flex flex-col sm:grid-rows-3 row-auto p-6 gap-6 bg-card/10 backdrop-filter backdrop-blur-3xl rounded-xl shadow-lg w-full '>
-            <div className='bg-background/50 backdrop-blur-sm rounded-xl shadow-lg p-6 sm:col-span-7 sm:row-span-2'>
+          <div className='md:grid md:grid-cols-12 flex flex-col md:grid-rows-3 row-auto p-1 gap-1 md:p-6 md:gap-6 bg-card/10 backdrop-filter backdrop-blur-3xl rounded-xl shadow-lg w-full '>
+            <div className='bg-background/50 backdrop-blur-md rounded-xl shadow-lg p-6 md:col-span-7 md:row-span-2'>
               <div className='flex items-center gap-4 mb-4'>
                 <div className='p-3 bg-orange-500/10 rounded-xl'>
                   <Bot className='w-5 h-5 text-secondary-orange' />
